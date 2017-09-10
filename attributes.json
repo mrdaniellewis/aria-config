@@ -1,0 +1,300 @@
+{
+  "activedescendant": {
+    "value": "id"
+  },
+  "atomic": {
+    "value": "true/false",
+    "terms": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "autocomplete": {
+    "value": "terms",
+    "terms": [
+      "inline",
+      "list",
+      "both",
+      "none"
+    ],
+    "default": "none"
+  },
+  "busy": {
+    "value": "true/false",
+    "terms": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "checked": {
+    "value": "tristate",
+    "terms": [
+      "false",
+      "mixed",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "colcount": {
+    "value": "integer"
+  },
+  "colindex": {
+    "value": "integer"
+  },
+  "colspan": {
+    "value": "integer"
+  },
+  "controls": {
+    "value": "idlist"
+  },
+  "current": {
+    "value": "token",
+    "tokens": [
+      "page",
+      "step",
+      "location",
+      "date",
+      "time",
+      "true",
+      "false"
+    ],
+    "default": "false"
+  },
+  "describedby": {
+    "value": "idlist"
+  },
+  "details": {
+    "value": "id"
+  },
+  "disabled": {
+    "value": "true/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "dropeffect": {
+    "deprecated": true,
+    "value": "tokenlist",
+    "tokens": [
+      "copy",
+      "execute",
+      "link",
+      "move",
+      "none",
+      "popup"
+    ],
+    "alone": [
+      "none"
+    ],
+    "default": "popup"
+  },
+  "errormessage": {
+    "value": "id"
+  },
+  "expanded": {
+    "value": "true/false/undefined",
+    "tokens": [
+      "false",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "flowto": {
+    "value": "idlist"
+  },
+  "grabbed": {
+    "deprecated": true,
+    "value": "true/false/undefined",
+    "tokens": [
+      "false",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "haspopup": {
+    "value": "token",
+    "tokens": [
+      "false",
+      "true",
+      "menu",
+      "listbox",
+      "tree",
+      "grid",
+      "dialog"
+    ]
+  },
+  "hidden": {
+    "value": "true/false/undefined",
+    "tokens": [
+      "false",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "invalid": {
+    "value": "token",
+    "tokens": [
+      "grammer",
+      "false",
+      "spelling",
+      "true"
+    ],
+    "default": "false"
+  },
+  "keyshortcuts": {
+    "value": "string"
+  },
+  "label": {
+    "value": "string"
+  },
+  "labelledby": {
+    "value": "idlist"
+  },
+  "level": {
+    "value": "integer"
+  },
+  "live": {
+    "value": "token",
+    "tokens": [
+      "assertive",
+      "off",
+      "polite"
+    ],
+    "default": "off"
+  },
+  "modal": {
+    "value": "true/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "multiline": {
+    "value": "true/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "multiselectable": {
+    "value": "true/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "orientation": {
+    "value": "token",
+    "tokens": [
+      "horizontal",
+      "undefined",
+      "vertical"
+    ],
+    "default": "undefined"
+  },
+  "owns": {
+    "value": "idlist"
+  },
+  "placeholder": {
+    "value": "string"
+  },
+  "posinset": {
+    "value": "integer"
+  },
+  "pressed": {
+    "value": "tristate",
+    "tokens": [
+      "false",
+      "mixed",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "readonly": {
+    "value": "true/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "relevant": {
+    "value": "tokenlist",
+    "tokens": [
+      "additions",
+      "all",
+      "removals",
+      "text"
+    ],
+    "alone": [
+      "all"
+    ],
+    "default": "additions text"
+  },
+  "required": {
+    "value": "text/false",
+    "tokens": [
+      "false",
+      "true"
+    ],
+    "default": "false"
+  },
+  "roledescription": {
+    "value": "string"
+  },
+  "rowcount": {
+    "value": "integer"
+  },
+  "rowindex": {
+    "value": "integer"
+  },
+  "rowspan": {
+    "value": "integer"
+  },
+  "selected": {
+    "value": "true/false/undefined",
+    "tokens": [
+      "false",
+      "true",
+      "undefined"
+    ],
+    "default": "undefined"
+  },
+  "setsize": {
+    "value": "integer"
+  },
+  "sort": {
+    "value": "token",
+    "tokens": [
+      "ascending",
+      "descending",
+      "none",
+      "other"
+    ],
+    "default": "none"
+  },
+  "valuemax": {
+    "value": "number"
+  },
+  "valuemin": {
+    "value": "number"
+  },
+  "valuenow": {
+    "value": "number"
+  },
+  "valuetext": {
+    "value": "string"
+  }
+}

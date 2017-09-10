@@ -1,0 +1,958 @@
+{
+  "alert": {
+    "superclass": [
+      "section"
+    ],
+    "implicitValues": {
+      "live": "assertive",
+      "atomic": "true"
+    },
+    "nameFromAuthor": true
+  },
+  "alertdialog": {
+    "superclass": [
+      "alert",
+      "dialog"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "application": {
+    "superclass": [
+      "structure"
+    ],
+    "attributes": [
+      "activedescendant"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "article": {
+    "superclass": [
+      "document"
+    ],
+    "attributes": [
+      "posinset",
+      "setsize"
+    ],
+    "nameFromAuthor": true
+  },
+  "banner": {
+    "superclass": [
+      "landmark"
+    ],
+    "fromFromAuthor": true
+  },
+  "button": {
+    "superclass": [
+      "command"
+    ],
+    "attributes": [
+      "expanded",
+      "pressed"
+    ],
+    "nameFromAuthor": true,
+    "nameFromContents": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true
+  },
+  "cell": {
+    "superclass": [
+      "section"
+    ],
+    "requiredContextRole": [
+      "row"
+    ],
+    "attributes": [
+      "colindex",
+      "colspan",
+      "rowindex",
+      "rowspan"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true
+  },
+  "checkbox": {
+    "superclass": [
+      "input"
+    ],
+    "attributes": [
+      "checked",
+      "readonly"
+    ],
+    "nameFromAuthor": true,
+    "nameFromContents": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "checked": "false"
+    },
+    "requiredAttributes": [
+      "checked"
+    ]
+  },
+  "columnheader": {
+    "superclass": [
+      "cell",
+      "gridcell",
+      "sectionhead"
+    ],
+    "requiredContextRole": [
+      "row"
+    ],
+    "attributes": [
+      "sort"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "combobox": {
+    "superclass": [
+      "select"
+    ],
+    "requiredOwnedElements": [
+      "textbox",
+      "listbox",
+      "tree",
+      "grid",
+      "dialog"
+    ],
+    "attributes": [
+      "autocomplete",
+      "controls",
+      "expanded",
+      "readonly",
+      "required"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "implicitValues": {
+      "expanded": "false",
+      "haspopup": "listbox"
+    },
+    "requiredAttributes": [
+      "controls",
+      "expanded"
+    ]
+  },
+  "command": {
+    "abstract": true,
+    "superclass": [
+      "widget"
+    ],
+    "nameFromAuthor": true
+  },
+  "complementary": {
+    "superclass": [
+      "landmark"
+    ],
+    "nameFromAuthor": true
+  },
+  "composite": {
+    "abstract": true,
+    "superclass": [
+      "widget"
+    ],
+    "attributes": [
+      "activedescendant"
+    ],
+    "nameFromAuthor": true
+  },
+  "contentinfo": {
+    "superclass": "landmark",
+    "nameFromAuthor": true
+  },
+  "definition": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true
+  },
+  "dialog": {
+    "superclass": [
+      "window"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "directory": {
+    "superclass": [
+      "list"
+    ],
+    "nameFromAuthor": true
+  },
+  "document": {
+    "superclass": "structure",
+    "attributes": [
+      "expanded"
+    ],
+    "nameFromAuthor": true
+  },
+  "feed": {
+    "superclass": [
+      "list"
+    ],
+    "requiredOwnedElements": [
+      "article"
+    ],
+    "nameFromAuthor": true
+  },
+  "figure": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true
+  },
+  "form": {
+    "superclass": "landmark",
+    "nameFromAuthor": true
+  },
+  "grid": {
+    "superclass": [
+      "composite",
+      "table"
+    ],
+    "requiredOwnedElements": [
+      "row",
+      "rowgroup row"
+    ],
+    "attributes": [
+      "level",
+      "multiselectable",
+      "readonly"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "gridcell": {
+    "superclass": [
+      "cell",
+      "widget"
+    ],
+    "requiredContextRole": [
+      "row"
+    ],
+    "attributes": [
+      "readonly",
+      "required",
+      "selected"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accesibleNameRequired": true
+  },
+  "group": {
+    "superclass": [
+      "section"
+    ],
+    "attributes": [
+      "activedescendant"
+    ],
+    "nameFromAuthor": true
+  },
+  "heading": {
+    "superclass": [
+      "sectionhead"
+    ],
+    "attributes": [
+      "level"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "defaultValues": {
+      "level": 2
+    },
+    "requiredAttributes": [
+      "level"
+    ]
+  },
+  "img": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "accesibleNameRequired": true,
+    "childrenPresentational": true
+  },
+  "input": {
+    "abstract": true,
+    "superclass": [
+      "widget"
+    ],
+    "nameFromAuthor": true
+  },
+  "landmark": {
+    "abstract": true,
+    "superclass": [
+      "section"
+    ]
+  },
+  "link": {
+    "superclass": [
+      "command"
+    ],
+    "attributes": [
+      "expanded"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accesibleNameRequired": true
+  },
+  "list": {
+    "superclass": [
+      "section"
+    ],
+    "requiredOwnedElements": [
+      "group listitem",
+      "listitem"
+    ],
+    "nameFromAuthor": true
+  },
+  "listbox": {
+    "superclass": [
+      "select"
+    ],
+    "requiredOwnedElements": [
+      "option"
+    ],
+    "attributes": [
+      "multiselectable",
+      "readonly",
+      "required"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "implicitValues": {
+      "orientation": "vertical"
+    }
+  },
+  "listitem": {
+    "superclass": [
+      "section"
+    ],
+    "requiredContextRole": [
+      "group",
+      "list"
+    ],
+    "attributes": [
+      "level",
+      "posinset",
+      "setsize"
+    ],
+    "nameFromAuthor": true
+  },
+  "log": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "implicitValues": {
+      "live": "polite"
+    }
+  },
+  "main": {
+    "superclass": [
+      "landmark"
+    ],
+    "nameFromAuthor": true
+  },
+  "marquee": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "math": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "childrenPresentational": true
+  },
+  "menu": {
+    "superclass": [
+      "select"
+    ],
+    "nameFromAuthor": true,
+    "implicitValues": {
+      "orientation": "vertical"
+    }
+  },
+  "menubar": {
+    "superclass": [
+      "menu"
+    ],
+    "nameFromAuthor": true,
+    "implicitValues": {
+      "orientation": "horizontal"
+    }
+  },
+  "menuitem": {
+    "superclass": [
+      "command"
+    ],
+    "requiredContextRole": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "attributes": [
+      "posinset",
+      "setsize"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "menuitemcheckbox": {
+    "superclass": [
+      "checkbox",
+      "menuitem"
+    ],
+    "requiredContextRole": [
+      "menu",
+      "menubar"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "checked": false
+    }
+  },
+  "menuitemradio": {
+    "superclass": [
+      "menuitemcheckbox",
+      "radio"
+    ],
+    "requiredContextRole": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "checked": "false"
+    }
+  },
+  "navigation": {
+    "superclass": [
+      "landmark"
+    ],
+    "nameFromAuthor": true
+  },
+  "none": {
+    "superclass": [
+      "structure"
+    ]
+  },
+  "note": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true
+  },
+  "option": {
+    "superclass": [
+      "input"
+    ],
+    "requiredContextRole": [
+      "listbox"
+    ],
+    "attributes": [
+      "checked",
+      "posinset",
+      "selected",
+      "setsize"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "selected": false
+    },
+    "requiredAttributes": [
+      "selected"
+    ]
+  },
+  "presentation": {
+    "superclass": [
+      "structure"
+    ]
+  },
+  "progressbar": {
+    "superclass": [
+      "range"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true
+  },
+  "radio": {
+    "superclass": [
+      "input"
+    ],
+    "attributes": [
+      "checked",
+      "posinset",
+      "setsize"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "checked": "false"
+    },
+    "requiredAttributes": [
+      "checked"
+    ]
+  },
+  "radiogroup": {
+    "superclass": [
+      "select"
+    ],
+    "requiredOwnedElements": [
+      "radio"
+    ],
+    "attributes": [
+      "readonly",
+      "required"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "range": {
+    "abstract": true,
+    "superclass": [
+      "widget"
+    ],
+    "attributes": [
+      "valuemax",
+      "valuemin",
+      "valuenow",
+      "valuetext"
+    ],
+    "nameFromAuthor": true
+  },
+  "region": {
+    "superclass": [
+      "landmark"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "roletype": {
+    "abstract": true,
+    "superclass": [],
+    "attributes": [
+      "atomic",
+      "busy",
+      "controls",
+      "current",
+      "describedby",
+      "details",
+      "disabled",
+      "dropeffect",
+      "errormessage",
+      "flowto",
+      "grabbed",
+      "haspopup",
+      "hidden",
+      "invalid",
+      "keyshortcuts",
+      "label",
+      "labelledby",
+      "live",
+      "owns",
+      "relevant",
+      "roledescription"
+    ]
+  },
+  "row": {
+    "superclass": [
+      "group",
+      "widget"
+    ],
+    "requiredContextRole": [
+      "grid",
+      "rowgroup",
+      "table",
+      "treegrid"
+    ],
+    "requiredOwnedElements": [
+      "cell",
+      "columnheader",
+      "gridcell",
+      "rowheader"
+    ],
+    "attributes": [
+      "colindex",
+      "level",
+      "rowindex",
+      "selected"
+    ],
+    "nameFromContext": true,
+    "nameFromAuthor": true
+  },
+  "rowgroup": {
+    "superclass": [
+      "structure"
+    ],
+    "requiredContextRole": [
+      "grid",
+      "table",
+      "treegrid"
+    ],
+    "requiredOwnedElements": [
+      "row"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true
+  },
+  "rowheader": {
+    "superclass": [
+      "cell",
+      "gridcell",
+      "sectionhead"
+    ],
+    "requiredContextRole": [
+      "row"
+    ],
+    "attributes": [
+      "sort"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "scrollbar": {
+    "superclass": [
+      "range"
+    ],
+    "attributes": [
+      "controls",
+      "orientation",
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ],
+    "nameFromAuthor": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "orientation": "vertical",
+      "valuemin": 0,
+      "valuemax": 100
+    },
+    "requiredAttributes": [
+      "controls",
+      "orientation",
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ]
+  },
+  "search": {
+    "superclass": [
+      "landmark"
+    ],
+    "nameFromAuthor": true
+  },
+  "searchbox": {
+    "superclass": "textbox",
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "section": {
+    "abstract": true,
+    "superclass": "structure",
+    "attributes": [
+      "expanded"
+    ]
+  },
+  "sectionhead": {
+    "abstract": true,
+    "superclass": [
+      "structure"
+    ],
+    "attributes": [
+      "expanded"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true
+  },
+  "select": {
+    "abstract": true,
+    "superclass": [
+      "composite",
+      "group"
+    ],
+    "attributes": [
+      "orientation"
+    ],
+    "nameFromAuthor": true
+  },
+  "separator": {
+    "superclass": [
+      "structure",
+      "widget"
+    ],
+    "attributes": [
+      "orientation",
+      "valuemax",
+      "valuemin",
+      "valuenow",
+      "valuetext"
+    ],
+    "nameFromAuthor": true,
+    "childrenPresentational": true,
+    "implicit": {
+      "orientation": "horizontal",
+      "valuemin": 0,
+      "valuemax": 100,
+      "valuenow": 50
+    }
+  },
+  "slider": {
+    "superclass": [
+      "input",
+      "range"
+    ],
+    "attributes": [
+      "orientation",
+      "readonly",
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ],
+    "nameFromAuthor": true,
+    "accesibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "orientation": "horizontal",
+      "valuemin": 0,
+      "valuemax": 100
+    },
+    "requiredAttributes": [
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ]
+  },
+  "spinbutton": {
+    "superclass": [
+      "composite",
+      "input",
+      "range"
+    ],
+    "attributes": [
+      "readonly",
+      "required",
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "implicitValues": {
+      "valuenow": 0
+    },
+    "requiredAttributes": [
+      "valuemax",
+      "valuemin",
+      "valuenow"
+    ]
+  },
+  "status": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "implicitValues": {
+      "live": "polite",
+      "atomic": "true"
+    }
+  },
+  "structure": {
+    "abstract": true,
+    "superclass": [
+      "roletype"
+    ]
+  },
+  "switch": {
+    "superclass": [
+      "checkbox"
+    ],
+    "attributes": [
+      "checked"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "checked": "false"
+    }
+  },
+  "tab": {
+    "superclass": [
+      "sectionhead",
+      "widget"
+    ],
+    "requireContextRole": [
+      "tablist"
+    ],
+    "attributes": [
+      "posinset",
+      "selected",
+      "setsize"
+    ],
+    "nameFromContent": true,
+    "nameFromAuthor": true,
+    "childrenPresentational": true,
+    "implicitValues": {
+      "selected": "false"
+    }
+  },
+  "table": {
+    "superclass": "table",
+    "requiredOwnedElements": [],
+    "attributes": [
+      "colcount",
+      "rowcount"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "tablist": {
+    "superclass": "composite",
+    "requiredOwnedElements": [
+      "tab"
+    ],
+    "attributes": [
+      "level",
+      "multiselectable",
+      "orientation"
+    ],
+    "nameFromAuthor": true,
+    "implicitValues": {
+      "orientation": "horizontal"
+    }
+  },
+  "tabpanel": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "term": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromAuthor": true
+  },
+  "textbox": {
+    "superclass": [
+      "input"
+    ],
+    "attributes": [
+      "activedescendant",
+      "autocomplete",
+      "multiline",
+      "placeholder",
+      "readonly",
+      "required"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "timer": {
+    "superclass": [
+      "status"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "toolbar": {
+    "superclass": [
+      "group"
+    ],
+    "attributes": [
+      "orientation"
+    ],
+    "nameFromAuthor": true,
+    "implicitRoles": {
+      "orientation": "horizontal"
+    }
+  },
+  "tooltip": {
+    "superclass": [
+      "section"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "tree": {
+    "superclass": [
+      "select"
+    ],
+    "attributes": [
+      "multiselectable",
+      "required"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true,
+    "implicit": {
+      "orientation": "vertical"
+    }
+  },
+  "treegrid": {
+    "superclass": [
+      "grid",
+      "tree"
+    ],
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "treeitem": {
+    "superclass": [
+      "listitem",
+      "option"
+    ],
+    "requiredContextRole": [
+      "group",
+      "tree"
+    ],
+    "nameFromContents": true,
+    "nameFromAuthor": true,
+    "accessibleNameRequired": true
+  },
+  "widget": {
+    "abstract": true,
+    "superclass": [
+      "roletype"
+    ]
+  },
+  "window": {
+    "abstract": true,
+    "superclass": [
+      "roletype"
+    ],
+    "attributes": [
+      "expanded",
+      "modal"
+    ],
+    "nameFromAuthor": true
+  }
+}
