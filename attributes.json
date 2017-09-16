@@ -1,18 +1,22 @@
 {
   "activedescendant": {
+    "type": "property",
     "value": "id"
   },
   "atomic": {
+    "type": "property",
+    "global": true,
     "value": "true/false",
-    "terms": [
+    "tokens": [
       "false",
       "true"
     ],
     "default": "false"
   },
   "autocomplete": {
-    "value": "terms",
-    "terms": [
+    "type": "property",
+    "value": "token",
+    "tokens": [
       "inline",
       "list",
       "both",
@@ -21,16 +25,19 @@
     "default": "none"
   },
   "busy": {
+    "type": "state",
+    "global": true,
     "value": "true/false",
-    "terms": [
+    "tokens": [
       "false",
       "true"
     ],
     "default": "false"
   },
   "checked": {
+    "type": "state",
     "value": "tristate",
-    "terms": [
+    "tokens": [
       "false",
       "mixed",
       "true",
@@ -39,18 +46,25 @@
     "default": "undefined"
   },
   "colcount": {
+    "type": "property",
     "value": "integer"
   },
   "colindex": {
+    "type": "property",
     "value": "integer"
   },
   "colspan": {
+    "type": "property",
     "value": "integer"
   },
   "controls": {
+    "type": "property",
+    "global": true,
     "value": "idlist"
   },
   "current": {
+    "type": "state",
+    "global": true,
     "value": "token",
     "tokens": [
       "page",
@@ -64,12 +78,18 @@
     "default": "false"
   },
   "describedby": {
+    "type": "property",
+    "global": true,
     "value": "idlist"
   },
   "details": {
+    "type": "property",
+    "global": true,
     "value": "id"
   },
   "disabled": {
+    "type": "state",
+    "global": true,
     "value": "true/false",
     "tokens": [
       "false",
@@ -78,6 +98,8 @@
     "default": "false"
   },
   "dropeffect": {
+    "type": "property",
+    "global": true,
     "deprecated": true,
     "value": "tokenlist",
     "tokens": [
@@ -88,15 +110,16 @@
       "none",
       "popup"
     ],
-    "alone": [
-      "none"
-    ],
-    "default": "popup"
+    "alone": "none",
+    "default": "none"
   },
   "errormessage": {
+    "type": "property",
+    "global": true,
     "value": "id"
   },
   "expanded": {
+    "type": "state",
     "value": "true/false/undefined",
     "tokens": [
       "false",
@@ -106,9 +129,13 @@
     "default": "undefined"
   },
   "flowto": {
+    "type": "property",
+    "global": true,
     "value": "idlist"
   },
   "grabbed": {
+    "type": "state",
+    "global": true,
     "deprecated": true,
     "value": "true/false/undefined",
     "tokens": [
@@ -119,6 +146,8 @@
     "default": "undefined"
   },
   "haspopup": {
+    "type": "property",
+    "global": true,
     "value": "token",
     "tokens": [
       "false",
@@ -128,9 +157,12 @@
       "tree",
       "grid",
       "dialog"
-    ]
+    ],
+    "default": "false"
   },
   "hidden": {
+    "type": "state",
+    "global": true,
     "value": "true/false/undefined",
     "tokens": [
       "false",
@@ -140,6 +172,8 @@
     "default": "undefined"
   },
   "invalid": {
+    "type": "state",
+    "global": true,
     "value": "token",
     "tokens": [
       "grammer",
@@ -150,18 +184,27 @@
     "default": "false"
   },
   "keyshortcuts": {
+    "type": "property",
+    "global": true,
     "value": "string"
   },
   "label": {
+    "type": "property",
+    "global": true,
     "value": "string"
   },
   "labelledby": {
+    "type": "property",
+    "global": true,
     "value": "idlist"
   },
   "level": {
+    "type": "property",
     "value": "integer"
   },
   "live": {
+    "type": "property",
+    "global": true,
     "value": "token",
     "tokens": [
       "assertive",
@@ -171,6 +214,7 @@
     "default": "off"
   },
   "modal": {
+    "type": "property",
     "value": "true/false",
     "tokens": [
       "false",
@@ -179,6 +223,7 @@
     "default": "false"
   },
   "multiline": {
+    "type": "property",
     "value": "true/false",
     "tokens": [
       "false",
@@ -187,6 +232,7 @@
     "default": "false"
   },
   "multiselectable": {
+    "type": "property",
     "value": "true/false",
     "tokens": [
       "false",
@@ -195,6 +241,7 @@
     "default": "false"
   },
   "orientation": {
+    "type": "property",
     "value": "token",
     "tokens": [
       "horizontal",
@@ -204,15 +251,20 @@
     "default": "undefined"
   },
   "owns": {
+    "type": "property",
+    "global": true,
     "value": "idlist"
   },
   "placeholder": {
+    "type": "property",
     "value": "string"
   },
   "posinset": {
+    "type": "property",
     "value": "integer"
   },
   "pressed": {
+    "type": "state",
     "value": "tristate",
     "tokens": [
       "false",
@@ -223,6 +275,7 @@
     "default": "undefined"
   },
   "readonly": {
+    "type": "property",
     "value": "true/false",
     "tokens": [
       "false",
@@ -231,6 +284,8 @@
     "default": "false"
   },
   "relevant": {
+    "type": "property",
+    "global": true,
     "value": "tokenlist",
     "tokens": [
       "additions",
@@ -238,13 +293,12 @@
       "removals",
       "text"
     ],
-    "alone": [
-      "all"
-    ],
+    "alone": "all",
     "default": "additions text"
   },
   "required": {
-    "value": "text/false",
+    "type": "property",
+    "value": "true/false",
     "tokens": [
       "false",
       "true"
@@ -252,18 +306,24 @@
     "default": "false"
   },
   "roledescription": {
+    "type": "property",
+    "global": true,
     "value": "string"
   },
   "rowcount": {
+    "type": "property",
     "value": "integer"
   },
   "rowindex": {
+    "type": "property",
     "value": "integer"
   },
   "rowspan": {
+    "type": "property",
     "value": "integer"
   },
   "selected": {
+    "type": "state",
     "value": "true/false/undefined",
     "tokens": [
       "false",
@@ -273,9 +333,11 @@
     "default": "undefined"
   },
   "setsize": {
+    "type": "property",
     "value": "integer"
   },
   "sort": {
+    "type": "property",
     "value": "token",
     "tokens": [
       "ascending",
@@ -286,15 +348,19 @@
     "default": "none"
   },
   "valuemax": {
+    "type": "property",
     "value": "number"
   },
   "valuemin": {
+    "type": "property",
     "value": "number"
   },
   "valuenow": {
+    "type": "property",
     "value": "number"
   },
   "valuetext": {
+    "type": "property",
     "value": "string"
   }
 }
