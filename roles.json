@@ -560,8 +560,7 @@
   },
   "progressbar": {
     "superclass": [
-      "range",
-      "status"
+      "range"
     ],
     "nameFromAuthor": true,
     "accessibleNameRequired": true,

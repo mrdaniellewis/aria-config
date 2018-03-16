@@ -1,40 +1,44 @@
 const expect = require('expect');
 
 expect.extend({
-  toBeOneOf(values, message) {
-    expect.assert(
-      values.includes(this.actual),
-      (message || `expected %s to be one of ${values}`),
-      this.actual,
-    );
-    return this;
+  toBeOneOf(received, expected) {
+    const pass = expected.includes(received);
+    return {
+      message: () => `expected ${received} ${this.isNot ? 'not ' : ''}to be one of ${expected}`,
+      pass,
+    };
   },
 
-  toBeAnArrayOrUndefined(message) {
-    expect.assert(
-      this.actual === undefined || Array.isArray(this.actual),
-      (message || 'expected %s to be an array or undefined'),
-      this.actual,
-    );
-    return this;
+  toBeAnArrayOrUndefined(received) {
+    const pass = received === undefined || Array.isArray(received);
+    return {
+      message: () => `expected ${received} ${this.isNot ? 'not ' : ''}to be an array or undefined`,
+      pass,
+    };
   },
 
-  toBeAHashOrUndefined(message) {
-    expect.assert(
-      this.actual === undefined || this.actual.constructor === Object,
-      (message || 'expected %s to be a hash or undefined'),
-      this.actual,
-    );
-    return this;
+  toBeAHashOrUndefined(received) {
+    const pass = received === undefined || received.constructor === Object;
+    return {
+      message: () => `expected ${received} ${this.isNot ? 'not ' : ''}to be a hash or undefined`,
+      pass,
+    };
   },
 
-  toBeAnInteger(message) {
-    const integer = parseInt(this.actual, 10);
-    expect.assert(
-      !Number.isNaN(integer) && this.actual === integer,
-      (message || 'expected %s to be an integer'),
-      this.actual,
-    );
-    return this;
+  toBeAnInteger(received) {
+    const integer = parseInt(received, 10);
+    const pass = !Number.isNaN(integer) && received === integer;
+    return {
+      message: () => `expected ${received} ${this.isNot ? 'not ' : ''}to be an integer`,
+      pass,
+    };
+  },
+
+  toHaveProperty(object, property) {
+    const pass = property in object;
+    return {
+      message: () => `expected ${property} ${this.isNot ? 'not ' : ''}to be one of ${Object.keys(object)}`,
+      pass,
+    };
   },
 });

@@ -50,12 +50,12 @@ describe('roles.json', () => {
 
       describe('superclass', () => {
         it('is an array', () => {
-          expect(role.superclass).toBeAn(Array);
+          expect(role.superclass).toBeInstanceOf(Array);
         });
 
         it('contains valid roles', () => {
           role.superclass.forEach((klass) => {
-            expect(roles[klass]).toExist('expected %s to be a valid role');
+            expect(roles).toHaveProperty(klass);
           });
         });
       });
@@ -68,7 +68,7 @@ describe('roles.json', () => {
         if (role.requiredContextRole) {
           it('contains valid roles', () => {
             role.requiredContextRole.forEach((contextRole) => {
-              expect(roles[contextRole]).toExist('expected %s to be a valid role');
+              expect(roles).toHaveProperty(contextRole);
             });
           });
         }
@@ -82,14 +82,14 @@ describe('roles.json', () => {
         if (role.requiredOwnedElements) {
           it('is an array of arrays', () => {
             role.requiredOwnedElements.forEach((item) => {
-              expect(item).toBeAn(Array);
+              expect(item).toBeInstanceOf(Array);
             });
           });
 
           it('contains valid roles', () => {
             role.requiredOwnedElements.forEach((item) => {
               item.forEach((owned) => {
-                expect(roles[owned]).toExist(`expected ${owned} to be a known role`);
+                expect(roles).toHaveProperty(owned);
               });
             });
           });
@@ -104,7 +104,7 @@ describe('roles.json', () => {
         if (role.attributes) {
           it('contains known attributes', () => {
             role.attributes.forEach((attribute) => {
-              expect(attributes[attribute]).toExist(`expected ${attribute} to be a valid attribute`);
+              expect(attributes).toHaveProperty(attribute);
             });
           });
         }

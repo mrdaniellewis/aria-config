@@ -65,7 +65,7 @@ describe('attributes.json', () => {
           });
         } else if (attribute.value === 'tokens') {
           it('has a tokens value that is an array', () => {
-            expect(attribute.tokens).toBeAn(Array);
+            expect(attribute.tokens).toBeInstanceOf(Array);
           });
 
           it('does not contain an alone key', () => {
@@ -77,7 +77,7 @@ describe('attributes.json', () => {
           });
         } else if (attribute.value === 'tokenlist') {
           it('has a tokens value that is an array', () => {
-            expect(attribute.tokens).toBeAn(Array);
+            expect(attribute.tokens).toBeInstanceOf(Array);
           });
 
           it('has an alone key contained within the list of tokens', () => {
@@ -88,7 +88,7 @@ describe('attributes.json', () => {
             attribute.default.split(' ').forEach((token, _, array) => {
               expect(token).toBeOneOf(attribute.tokens);
               if (array.length > 1) {
-                expect(token).toNotEqual(attribute.alone);
+                expect(token).not.toEqual(attribute.alone);
               }
             });
           });
