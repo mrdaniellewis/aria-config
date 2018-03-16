@@ -470,6 +470,7 @@
       "menubar"
     ],
     "attributes": [
+      "expanded",
       "posinset",
       "setsize"
     ],
