@@ -1,6 +1,6 @@
 {
   "name": "aria-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "WAI-ARIA roles and properties in a JSON format",
   "main": "index.js",
   "files": [
