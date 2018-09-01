@@ -419,6 +419,14 @@
     "requiredOwnedElements": [
       [
         "group",
+        "menuitem"
+      ],
+      [
+        "group",
+        "menuitemcheckbox"
+      ],
+      [
+        "group",
         "menuitemradio"
       ],
       [
@@ -441,6 +449,14 @@
       "menu"
     ],
     "requiredOwnedElements": [
+      [
+        "group",
+        "menuitem"
+      ],
+      [
+        "group",
+        "menuitemcheckbox"
+      ],
       [
         "group",
         "menuitemradio"
@@ -484,6 +500,7 @@
       "menuitem"
     ],
     "requiredContextRole": [
+      "group",
       "menu",
       "menubar"
     ],
