@@ -60,6 +60,30 @@ describe('roles.json', () => {
         });
       });
 
+      describe('requiredOwnedElements', () => {
+        it('is undefined or an array', () => {
+          expect(role.requiredOwnedElements).toBeAnArrayOrUndefined();
+        });
+
+        if (role.requiredOwnedElements) {
+          role.requiredOwnedElements.forEach(function isValid([owned, child]) {
+            describe(owned, () => {
+              it('is a valid role', () => {
+                expect(owned).toBeOneOf(Object.keys(roles));
+              });
+
+              it('has a child of undefined or an array', () => {
+                expect(child).toBeAnArrayOrUndefined();
+              });
+
+              if (child && Array.isArray(child)) {
+                child.forEach(isValid);
+              }
+            });
+          });
+        }
+      });
+
       describe('requiredContextRole', () => {
         it('is undefined or an array', () => {
           expect(role.requiredContextRole).toBeAnArrayOrUndefined();
@@ -69,28 +93,6 @@ describe('roles.json', () => {
           it('contains valid roles', () => {
             role.requiredContextRole.forEach((contextRole) => {
               expect(roles).toHaveProperty(contextRole);
-            });
-          });
-        }
-      });
-
-      describe('requiredOwnedElements', () => {
-        it('is undefined or an array', () => {
-          expect(role.requiredOwnedElements).toBeAnArrayOrUndefined();
-        });
-
-        if (role.requiredOwnedElements) {
-          it('is an array of arrays', () => {
-            role.requiredOwnedElements.forEach((item) => {
-              expect(item).toBeInstanceOf(Array);
-            });
-          });
-
-          it('contains valid roles', () => {
-            role.requiredOwnedElements.forEach((item) => {
-              item.forEach((owned) => {
-                expect(roles).toHaveProperty(owned);
-              });
             });
           });
         }

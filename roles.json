@@ -222,30 +222,36 @@
     "requiredOwnedElements": [
       [
         "row",
-        "gridcell"
-      ],
-      [
-        "row",
-        "columnheader"
-      ],
-      [
-        "row",
-        "rowheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "gridcell"
+        [
+          [
+            "gridcell"
+          ],
+          [
+            "columnheader"
+          ],
+          [
+            "rowheader"
+          ]
+        ]
       ],
       [
         "rowgroup",
-        "row",
-        "columnheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "rowheader"
+        [
+          [
+            "row",
+            [
+              [
+                "gridcell"
+              ],
+              [
+                "columnheader"
+              ],
+              [
+                "rowheader"
+              ]
+            ]
+          ]
+        ]
       ]
     ],
     "attributes": [
@@ -338,11 +344,15 @@
     ],
     "requiredOwnedElements": [
       [
-        "group",
         "listitem"
       ],
       [
-        "listitem"
+        "group",
+        [
+          [
+            "listitem"
+          ]
+        ]
       ]
     ],
     "nameFromAuthor": true
@@ -418,18 +428,6 @@
     ],
     "requiredOwnedElements": [
       [
-        "group",
-        "menuitem"
-      ],
-      [
-        "group",
-        "menuitemcheckbox"
-      ],
-      [
-        "group",
-        "menuitemradio"
-      ],
-      [
         "menuitem"
       ],
       [
@@ -437,6 +435,20 @@
       ],
       [
         "menuitemradio"
+      ],
+      [
+        "group",
+        [
+          [
+            "menuitem"
+          ],
+          [
+            "menuitemcheckbox"
+          ],
+          [
+            "menuitemradio"
+          ]
+        ]
       ]
     ],
     "nameFromAuthor": true,
@@ -450,18 +462,6 @@
     ],
     "requiredOwnedElements": [
       [
-        "group",
-        "menuitem"
-      ],
-      [
-        "group",
-        "menuitemcheckbox"
-      ],
-      [
-        "group",
-        "menuitemradio"
-      ],
-      [
         "menuitem"
       ],
       [
@@ -469,6 +469,20 @@
       ],
       [
         "menuitemradio"
+      ],
+      [
+        "group",
+        [
+          [
+            "menuitem"
+          ],
+          [
+            "menuitemcheckbox"
+          ],
+          [
+            "menuitemradio"
+          ]
+        ]
       ]
     ],
     "nameFromAuthor": true,
@@ -678,20 +692,6 @@
       "table",
       "treegrid"
     ],
-    "requiredOwnedElements": [
-      [
-        "cell"
-      ],
-      [
-        "columnheader"
-      ],
-      [
-        "gridcell"
-      ],
-      [
-        "rowheader"
-      ]
-    ],
     "attributes": [
       "colindex",
       "level",
@@ -709,11 +709,6 @@
       "grid",
       "table",
       "treegrid"
-    ],
-    "requiredOwnedElements": [
-      [
-        "row"
-      ]
     ],
     "nameFromContents": true,
     "nameFromAuthor": true
@@ -933,30 +928,36 @@
     "requiredOwnedElements": [
       [
         "row",
-        "cell"
-      ],
-      [
-        "row",
-        "columnheader"
-      ],
-      [
-        "row",
-        "rowheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "cell"
+        [
+          [
+            "cell"
+          ],
+          [
+            "columnheader"
+          ],
+          [
+            "rowheader"
+          ]
+        ]
       ],
       [
         "rowgroup",
-        "row",
-        "columnheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "rowheader"
+        [
+          [
+            "row",
+            [
+              [
+                "cell"
+              ],
+              [
+                "columnheader"
+              ],
+              [
+                "rowheader"
+              ]
+            ]
+          ]
+        ]
       ]
     ],
     "attributes": [
@@ -1050,7 +1051,11 @@
       ],
       [
         "group",
-        "treeitem"
+        [
+          [
+            "treeitem"
+          ]
+        ]
       ]
     ],
     "attributes": [
@@ -1071,30 +1076,36 @@
     "requiredOwnedElements": [
       [
         "row",
-        "gridcell"
-      ],
-      [
-        "row",
-        "columnheader"
-      ],
-      [
-        "row",
-        "rowheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "gridcell"
+        [
+          [
+            "gridcell"
+          ],
+          [
+            "columnheader"
+          ],
+          [
+            "rowheader"
+          ]
+        ]
       ],
       [
         "rowgroup",
-        "row",
-        "columnheader"
-      ],
-      [
-        "rowgroup",
-        "row",
-        "rowheader"
+        [
+          [
+            "row",
+            [
+              [
+                "gridcell"
+              ],
+              [
+                "columnheader"
+              ],
+              [
+                "rowheader"
+              ]
+            ]
+          ]
+        ]
       ]
     ],
     "nameFromAuthor": true,
